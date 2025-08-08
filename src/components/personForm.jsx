@@ -9,7 +9,7 @@ export default function PersonalInfo() {
       </div>
       <div className="input-section">
         <div className="form-picture">
-          <img src="../../public/images/person.jpg" alt="personal photo" />
+          <img src="../../images/person.jpg" alt="personal photo" />
           <div>
             <Plus color="#fdfeff" size={20} />
           </div>
@@ -35,6 +35,10 @@ export default function PersonalInfo() {
         <label htmlFor="number">
           Phone Number
           <input type="tel" name="number" id="number" maxLength={10} />
+        </label>
+        <label htmlFor="address">
+          Address
+          <input type="text" name="address" id="address" />
         </label>
       </div>
     </>
