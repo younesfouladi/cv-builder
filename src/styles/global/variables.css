@@ -1,0 +1,13 @@
+:root {
+  font-size: 16px;
+  --container-bg: #f6f7fa;
+  --section-bg: #fdfeff;
+  --primary-color: #3175e2;
+  --primary-hover: #e8edff;
+  --section-border: #d5d8da;
+  font-family: "Inter", sans-serif;
+}
+
+:root.dark {
+  font-size: 16px;
+}
