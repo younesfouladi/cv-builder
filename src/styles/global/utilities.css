@@ -1,0 +1,62 @@
+:root {
+  font-size: 16px;
+  --container-bg: #f6f7fa;
+  --section-bg: #fdfeff;
+  --primary-color: #3175e2;
+  --primary-hover: #e8edff;
+  --section-border: #d5d8da;
+  --gray-color: #7e7e7e;
+  --white-color: #fdfeff;
+  font-family: "Vazirmatn", sans-serifs;
+}
+
+:root.dark {
+  font-size: 16px;
+}
+
+.btn {
+  border-radius: 5rem;
+  border: none;
+  padding: 0.5rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+.btn-secondary:hover {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}
+
+input {
+  border-radius: 2rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--gray-color);
+}
+
+input:focus {
+  outline: 1px solid var(--primary-color);
+}
+
+/* Form */
+.twoColumnForm {
+  width: 100%;
+  display: flex;
+  column-gap: 1rem;
+}
