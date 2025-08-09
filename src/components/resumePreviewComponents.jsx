@@ -1,7 +1,7 @@
 export function RenderResumePicture() {
   return (
     <div className="resume-picture">
-      <img src="../../images/person.jpg" alt="Person Picture" />
+      <img src={"../../images/person.jpg"} alt="Person Picture" />
     </div>
   );
 }

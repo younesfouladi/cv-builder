@@ -1,4 +1,5 @@
 import "../../styles/resumePreview.css";
+import { useEffect } from "react";
 import {
   RenderResumePicture,
   RenderResumeAddress,
@@ -17,9 +18,10 @@ export default function ResumePreview() {
 }
 
 function TemplateOne() {
-  const container = document.querySelector(".ResumePreview");
-  container.classList.add("templateOne");
-
+  useEffect(() => {
+    const container = document.querySelector(".ResumePreview");
+    if (container) container.classList.add("templateOne");
+  });
   return (
     <>
       <div>
