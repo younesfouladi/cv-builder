@@ -7,6 +7,7 @@ import {
   RenderResumeJobTitle,
   RenderResumeName,
   RenderResumeNumber,
+  RenderResumeLastName,
 } from "../resumePreviewComponents.jsx";
 
 export default function ResumePreview() {
@@ -20,20 +21,25 @@ export default function ResumePreview() {
 function TemplateOne() {
   useEffect(() => {
     const container = document.querySelector(".ResumePreview");
-    if (container) container.classList.add("templateOne");
+    if (container) container.classList.add("template1");
   });
   return (
     <>
       <div>
         <RenderResumePicture />
+      </div>
+      <div>
+        <RenderResumeName />
+        <RenderResumeLastName />
+        <RenderResumeJobTitle />
+      </div>
+      <div>
         <div>
           <RenderResumeNumber />
           <RenderResumeEmail />
           <RenderResumeAddress />
         </div>
       </div>
-      <RenderResumeName />
-      <RenderResumeJobTitle />
     </>
   );
 }

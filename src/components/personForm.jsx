@@ -1,5 +1,4 @@
 import { Plus } from "lucide-react";
-
 export default function PersonalInfo() {
   return (
     <>
@@ -30,7 +29,7 @@ export default function PersonalInfo() {
         </div>
         <label htmlFor="Email">
           Email
-          <input type="email" name="Email" id="Email" />
+          <input type="email" name="Email" id="email" />
         </label>
         <label htmlFor="number">
           Phone Number
