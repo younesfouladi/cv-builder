@@ -24,8 +24,9 @@ function BreadCrumb() {
   return (
     <div className="breadcrumb">
       <a className="breadcrumb-item">Personal information</a>
-      <a className="breadcrumb-item">Expriences</a>
+      <a className="breadcrumb-item">Skills</a>
       <a className="breadcrumb-item">Education</a>
+      <a className="breadcrumb-item">Expriences</a>
     </div>
   );
 }

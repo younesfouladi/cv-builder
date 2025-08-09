@@ -46,7 +46,8 @@
   color: var(--white-color);
 }
 
-input {
+input,
+textarea {
   border-radius: 2rem;
   padding: 0.5rem 1rem;
   border: 1px solid var(--input-border);
