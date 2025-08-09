@@ -12,7 +12,7 @@ import {
 
 export default function ResumePreview() {
   return (
-    <div className="ResumePreview">
+    <div className="resumePreview">
       <TemplateOne />
     </div>
   );
@@ -24,22 +24,27 @@ function TemplateOne() {
     if (container) container.classList.add("template1");
   });
   return (
-    <>
-      <div>
+    <div className="t1">
+      <div className="t1-left">
+        <div className="backdrop"> </div>
         <RenderResumePicture />
-      </div>
-      <div>
-        <RenderResumeName />
-        <RenderResumeLastName />
-        <RenderResumeJobTitle />
-      </div>
-      <div>
-        <div>
+        <div className="t1-about"></div>
+        <div className="t1-contact">
           <RenderResumeNumber />
           <RenderResumeEmail />
           <RenderResumeAddress />
         </div>
+        <div className="t1-skills"></div>
+        <div className="t1-language"></div>
       </div>
-    </>
+
+      <div className="t1-right">
+        <div className="t1-namesection">
+          <RenderResumeName />
+          <RenderResumeLastName />
+          <RenderResumeJobTitle />
+        </div>
+      </div>
+    </div>
   );
 }

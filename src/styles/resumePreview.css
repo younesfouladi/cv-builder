@@ -1,3 +1,71 @@
 .resumePreview {
-  background-color: red;
+  background-color: var(--gray-light);
+  border: 1px solid var(--primary-hover);
+  padding: 1rem;
+  border-radius: 2rem;
+}
+
+.resumePreview > div {
+  width: 100%;
+  height: 100%;
+  border-radius: 2rem;
+}
+
+/* Template 1 ⭐ */
+.resumePreview .t1 {
+  background-color: var(--section-bg);
+  display: flex;
+}
+
+.resumePreview .t1 .t1-left {
+  padding: 2rem 1rem 0 1rem;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.resumePreview .t1 .t1-left .backdrop {
+  position: absolute;
+  bottom: 0;
+  width: 88%;
+  height: 100%;
+  background-color: var(--primary-hover);
+  clip-path: polygon(100% 20%, 100% 100%, 0 100%, 0 20%);
+  z-index: -1;
+}
+
+.resumePreview .t1 .t1-left .resume-picture {
+  height: fit-content;
+  border-radius: 50%;
+  outline: 0.5rem solid var(--section-bg);
+}
+
+.resumePreview .t1 .t1-left .resume-picture img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.resumePreview .t1 .t1-right {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1rem 0 1rem;
+}
+
+.resumePreview .t1 .t1-right .t1-namesection {
+  line-height: 1;
+  padding: 4rem 0;
+}
+
+.resumePreview .t1 .t1-right .t1-namesection .resume-name {
+  font-size: 2.5rem;
+}
+
+.resumePreview .t1 .t1-right .t1-namesection .resume-lastname {
+  font-size: 3rem;
+}
+
+.resumePreview .t1 .t1-right .t1-namesection .resume-jobtitle {
+  font-weight: 300;
+  margin-top: 0.5rem;
 }
