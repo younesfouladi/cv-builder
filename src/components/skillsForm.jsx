@@ -1,7 +1,6 @@
 import { useState } from "react";
 
-export default function SkillsInfo() {
-  const [skills, setSkill] = useState([]);
+export default function SkillsInfo({ skills, setSkill, setAboutYou }) {
   const [currentSkill, setCurrentSkill] = useState("");
 
   const handleAddSkill = () => {
@@ -22,6 +21,9 @@ export default function SkillsInfo() {
           name="aboutyou"
           id="aboutyou"
           rows={6}
+          onChange={(e) => {
+            setAboutYou(e.target.value);
+          }}
         ></textarea>
         <div>
           <h1 className="form-heading">Skills</h1>

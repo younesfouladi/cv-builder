@@ -8,74 +8,40 @@ export function RenderResumePicture() {
   );
 }
 
-export function RenderResumeAddress() {
-  const [address, setAddres] = useState("");
-  useEffect(() => {
-    const input = document.querySelector("#address");
-
-    input.addEventListener("input", (e) => {
-      setAddres(e.target.value);
-    });
-  });
+export function RenderResumeAddress({ address }) {
   return <p className="resume-address">{address}</p>;
 }
 
-export function RenderResumeEmail() {
-  const [email, setEmail] = useState("");
-  useEffect(() => {
-    const input = document.querySelector("#email");
-
-    input.addEventListener("input", (e) => {
-      setEmail(e.target.value);
-    });
-  });
+export function RenderResumeEmail({ email }) {
   return <p className="resume-email">{email}</p>;
 }
 
-export function RenderResumeNumber() {
-  const [number, setNumber] = useState("");
-  useEffect(() => {
-    const input = document.querySelector("#number");
-
-    input.addEventListener("input", (e) => {
-      setNumber(e.target.value);
-    });
-  });
+export function RenderResumeNumber({ number }) {
   return <p className="resume-number">{number}</p>;
 }
 
-export function RenderResumeName() {
-  const [name, setName] = useState("");
-  useEffect(() => {
-    const input = document.querySelector("#firstname");
-
-    input.addEventListener("input", (e) => {
-      setName(e.target.value);
-    });
-  });
+export function RenderResumeName({ name }) {
   return <h1 className="resume-name">{name}</h1>;
 }
 
-export function RenderResumeLastName() {
-  const [lastName, setLastName] = useState("");
-  useEffect(() => {
-    const input = document.querySelector("#lastname");
-
-    input.addEventListener("input", (e) => {
-      setLastName(e.target.value);
-    });
-  });
+export function RenderResumeLastName({ lastName }) {
   return <h1 className="resume-lastname">{lastName}</h1>;
 }
 
-export function RenderResumeJobTitle() {
-  const [jobTitle, setJobTitle] = useState("");
-  useEffect(() => {
-    const input = document.querySelector("#jobtitle");
-
-    input.addEventListener("input", (e) => {
-      setJobTitle(e.target.value);
-    });
-  });
+export function RenderResumeJobTitle({ jobTitle }) {
   return <h2 className="resume-jobtitle">{jobTitle}</h2>;
+}
+
+export function RenderResumeAboutYou({ aboutYou }) {
+  return <p className="resume-aboutyou">{aboutYou}</p>;
+}
+
+export function RenderResumeSkills({ skills }) {
+  return (
+    <ul className="FormSkillList">
+      {skills.length > 0
+        ? skills.map((skill, index) => <li key={index}>{skill}</li>)
+        : null}
+    </ul>
+  );
 }
