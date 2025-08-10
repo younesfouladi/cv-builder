@@ -2,6 +2,7 @@ import { useState } from "react";
 import "../../styles/inputForm.css";
 import PersonalInfo from "../personForm.jsx";
 import SkillsInfo from "../skillsForm.jsx";
+import EducationInfo from "../EducationForm.jsx";
 
 export default function InputForm({
   setName,
@@ -15,6 +16,8 @@ export default function InputForm({
   setAboutYou,
   language,
   setLanguage,
+  education,
+  setEducation,
 }) {
   const [isActive, setIsActive] = useState(0);
 
@@ -50,6 +53,13 @@ export default function InputForm({
                   setAboutYou={setAboutYou}
                   language={language}
                   setLanguage={setLanguage}
+                />
+              );
+            case 2:
+              return (
+                <EducationInfo
+                  education={education}
+                  setEducation={setEducation}
                 />
               );
           }

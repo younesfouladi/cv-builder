@@ -24,6 +24,7 @@
   font-weight: 500;
   cursor: pointer;
   transition: all 0.3s ease;
+  display: flex;
 }
 
 .btn-primary {
@@ -109,4 +110,9 @@ input:focus {
   100% {
     opacity: 1;
   }
+}
+
+button.AddObjectListBtn {
+  margin: 0 auto;
+  padding: 0.5rem 2rem;
 }

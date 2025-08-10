@@ -54,7 +54,7 @@ export function RenderResumeJobTitle({ jobTitle }) {
 export function RenderResumeAboutYou({ aboutYou, icon }) {
   if (aboutYou.trim() !== "" && aboutYou.trim() !== null) {
     return (
-      <div className="t1-about">
+      <div className="aboutme">
         <h2>{icon} About Me</h2>
         <p className="resume-aboutyou">{aboutYou}</p>
       </div>

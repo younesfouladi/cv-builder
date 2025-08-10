@@ -83,3 +83,7 @@
   background-color: var(--primary-color);
   color: var(--container-bg);
 }
+
+.inputform .input-section .educationFormList {
+  grid-template-columns: 1fr;
+}
