@@ -13,6 +13,8 @@ export default function InputForm({
   setSkill,
   skills,
   setAboutYou,
+  language,
+  setLanguage,
 }) {
   const [isActive, setIsActive] = useState(0);
 
@@ -46,6 +48,8 @@ export default function InputForm({
                   skills={skills}
                   setSkill={setSkill}
                   setAboutYou={setAboutYou}
+                  language={language}
+                  setLanguage={setLanguage}
                 />
               );
           }

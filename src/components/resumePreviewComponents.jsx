@@ -43,3 +43,13 @@ export function RenderResumeSkills({ skills }) {
     </ul>
   );
 }
+
+export function RenderResumeLanguage({ language }) {
+  return (
+    <ul className="FormSkillList">
+      {language.length > 0
+        ? language.map((lang, index) => <li key={index}>{lang}</li>)
+        : null}
+    </ul>
+  );
+}

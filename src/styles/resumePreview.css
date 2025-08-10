@@ -93,7 +93,8 @@
   color: var(--gray-light);
 }
 
-.resumePreview .t1 .t1-left .t1-skills ul {
+.resumePreview .t1 .t1-left .t1-skills ul,
+.resumePreview .t1 .t1-left .t1-language ul {
   padding-left: 0.5rem;
   list-style: none;
   line-height: 2;
@@ -102,7 +103,8 @@
   text-align: center;
 }
 
-.resumePreview .t1 .t1-left .t1-skills ul li:nth-child(odd) {
+.resumePreview .t1 .t1-left .t1-skills ul li:nth-child(odd),
+.resumePreview .t1 .t1-left .t1-language ul li:nth-child(odd) {
   border-right: 1px solid var(--gray-light);
 }
 

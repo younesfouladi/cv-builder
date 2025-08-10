@@ -1,8 +1,15 @@
 import { useState } from "react";
 import { Trash2 } from "lucide-react";
 
-export default function SkillsInfo({ skills, setSkill, setAboutYou }) {
+export default function SkillsInfo({
+  skills,
+  setSkill,
+  setAboutYou,
+  language,
+  setLanguage,
+}) {
   const [currentSkill, setCurrentSkill] = useState("");
+  const [currentLang, setCurrentLang] = useState("");
 
   const handleAddSkill = () => {
     if (currentSkill.trim() === "") return;
@@ -12,6 +19,16 @@ export default function SkillsInfo({ skills, setSkill, setAboutYou }) {
 
   const handleRemoveSkill = (key) => {
     setSkill((prevItems) => prevItems.filter((item) => item !== key));
+  };
+
+  const handleAddLanguage = () => {
+    if (currentLang.trim() === "") return;
+    setLanguage((prevSkills) => [...prevSkills, currentLang]);
+    setCurrentLang("");
+  };
+
+  const handleRemoveLanguage = (key) => {
+    setLanguage((prevItems) => prevItems.filter((item) => item !== key));
   };
 
   return (
@@ -50,7 +67,7 @@ export default function SkillsInfo({ skills, setSkill, setAboutYou }) {
             Add
           </button>
         </label>
-        <ul className="FormSkillList">
+        <ul className="addremoveList">
           {skills.length > 0 ? (
             skills.map((skill) => (
               <li key={skill}>
@@ -60,6 +77,42 @@ export default function SkillsInfo({ skills, setSkill, setAboutYou }) {
                   </button>
                 }{" "}
                 {skill}
+              </li>
+            ))
+          ) : (
+            <p>Nothing Added...</p>
+          )}
+        </ul>
+
+        <div>
+          <h1 className="form-heading">Languages</h1>
+          <h3 className="form-caption">How many languages you know?</h3>
+        </div>
+        <label className="AddSkill">
+          <input
+            type="text"
+            name="AddSkill"
+            id="Addlaneguage"
+            value={currentLang}
+            onChange={(e) => setCurrentLang(e.target.value)}
+          />
+          <button
+            className="AddSkillButton btn"
+            onClick={(e) => handleAddLanguage(e)}
+          >
+            Add
+          </button>
+        </label>
+        <ul className="addremoveList">
+          {language.length > 0 ? (
+            language.map((lang) => (
+              <li key={lang}>
+                {
+                  <button onClick={() => handleRemoveLanguage(lang)}>
+                    {<Trash2 size={20} color="#b90000" />}
+                  </button>
+                }{" "}
+                {lang}
               </li>
             ))
           ) : (

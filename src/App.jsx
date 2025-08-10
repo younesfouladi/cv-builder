@@ -14,6 +14,7 @@ function App() {
   const [address, setAddress] = useState("");
   const [skills, setSkill] = useState([]);
   const [aboutYou, setAboutYou] = useState("");
+  const [language, setLanguage] = useState([]);
 
   return (
     <div className="container">
@@ -28,7 +29,10 @@ function App() {
         setSkill={setSkill}
         skills={skills}
         setAboutYou={setAboutYou}
+        language={language}
+        setLanguage={setLanguage}
       />
+
       <ResumePreview
         name={name}
         lastName={lastName}
@@ -38,6 +42,7 @@ function App() {
         address={address}
         aboutYou={aboutYou}
         skills={skills}
+        language={language}
       />
     </div>
   );
