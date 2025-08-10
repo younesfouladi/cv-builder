@@ -56,7 +56,7 @@ export function RenderResumeAboutYou({ aboutYou, icon }) {
     return (
       <div className="t1-about">
         <h2>{icon} About Me</h2>
-        <p className="resume-aboutyou">{aboutYou}</p>;
+        <p className="resume-aboutyou">{aboutYou}</p>
       </div>
     );
   }
