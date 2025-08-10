@@ -16,14 +16,15 @@ export default function SkillsInfo({ skills, setSkill, setAboutYou }) {
 
   return (
     <>
-      <div>
-        <h1 className="form-heading">About you</h1>
-        <h3 className="form-caption">Tell more about your abilities</h3>
-      </div>
       <div className="input-section">
+        <div>
+          <h1 className="form-heading">About you</h1>
+          <h3 className="form-caption">Tell more about your abilities</h3>
+        </div>
         <textarea
           placeholder="Explain briefly about yourself & what you can do"
           name="aboutyou"
+          spellCheck="false"
           id="aboutyou"
           rows={6}
           onChange={(e) => {

@@ -12,6 +12,15 @@ import {
   RenderResumeSkills,
 } from "../resumePreviewComponents.jsx";
 
+import {
+  UserRound,
+  SquareUserRound,
+  Settings,
+  Phone,
+  Mail,
+  MapPin,
+} from "lucide-react";
+
 export default function ResumePreview({
   name,
   lastName,
@@ -58,14 +67,34 @@ function TemplateOne({
         <div className="backdrop"> </div>
         <RenderResumePicture />
         <div className="t1-about">
+          <h2>
+            <UserRound /> About Me
+          </h2>
           <RenderResumeAboutYou aboutYou={aboutYou} />
         </div>
         <div className="t1-contact">
-          <RenderResumeNumber number={number} />
-          <RenderResumeEmail email={email} />
-          <RenderResumeAddress address={address} />
+          <h2>
+            <SquareUserRound />
+            Contact
+          </h2>
+          <span>
+            <Phone size={20} />
+            <RenderResumeNumber number={number} />
+          </span>
+          <span>
+            <MapPin size={20} />
+            <RenderResumeEmail email={email} />
+          </span>
+          <span>
+            <Mail size={20} />
+            <RenderResumeAddress address={address} />
+          </span>
         </div>
         <div className="t1-skills">
+          <h2>
+            <Settings />
+            Skills
+          </h2>
           <RenderResumeSkills skills={skills} />
         </div>
         <div className="t1-language"></div>

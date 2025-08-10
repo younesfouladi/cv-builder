@@ -9,11 +9,11 @@ export default function PersonalInfo({
 }) {
   return (
     <>
-      <div>
-        <h1 className="form-heading">Personal Information</h1>
-        <h3 className="form-caption">Enter your personal details</h3>
-      </div>
       <div className="input-section">
+        <div>
+          <h1 className="form-heading">Personal Information</h1>
+          <h3 className="form-caption">Enter your personal details</h3>
+        </div>
         <div className="form-picture">
           <img src="../../images/person.jpg" alt="personal photo" />
           <div>
