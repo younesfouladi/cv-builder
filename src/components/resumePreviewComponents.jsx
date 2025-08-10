@@ -6,16 +6,37 @@ export function RenderResumePicture() {
   );
 }
 
-export function RenderResumeAddress({ address }) {
-  return <p className="resume-address">{address}</p>;
+export function RenderResumeAddress({ address, icon }) {
+  if (address.trim() !== "" && address.trim() !== null) {
+    return (
+      <span>
+        {icon}
+        <p className="resume-address">{address}</p>
+      </span>
+    );
+  }
 }
 
-export function RenderResumeEmail({ email }) {
-  return <p className="resume-email">{email}</p>;
+export function RenderResumeEmail({ email, icon }) {
+  if (email.trim() !== "" && email.trim() !== null) {
+    return (
+      <span>
+        {icon}
+        <p className="resume-email">{email}</p>
+      </span>
+    );
+  }
 }
 
-export function RenderResumeNumber({ number }) {
-  return <p className="resume-number">{number}</p>;
+export function RenderResumeNumber({ number, icon }) {
+  if (number.trim() !== "" && number.trim() !== null) {
+    return (
+      <span>
+        {icon}
+        <p className="resume-number">{number}</p>
+      </span>
+    );
+  }
 }
 
 export function RenderResumeName({ name }) {
@@ -30,8 +51,15 @@ export function RenderResumeJobTitle({ jobTitle }) {
   return <h2 className="resume-jobtitle">{jobTitle}</h2>;
 }
 
-export function RenderResumeAboutYou({ aboutYou }) {
-  return <p className="resume-aboutyou">{aboutYou}</p>;
+export function RenderResumeAboutYou({ aboutYou, icon }) {
+  if (aboutYou.trim() !== "" && aboutYou.trim() !== null) {
+    return (
+      <div className="t1-about">
+        <h2>{icon} About Me</h2>
+        <p className="resume-aboutyou">{aboutYou}</p>;
+      </div>
+    );
+  }
 }
 
 export function RenderResumeSkills({ skills }) {

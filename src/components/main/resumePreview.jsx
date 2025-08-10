@@ -21,6 +21,7 @@ import {
   Mail,
   MapPin,
   Earth,
+  User,
 } from "lucide-react";
 
 export default function ResumePreview({
@@ -71,29 +72,16 @@ function TemplateOne({
       <div className="t1-left">
         <div className="backdrop"> </div>
         <RenderResumePicture />
-        <div className="t1-about">
-          <h2>
-            <UserRound /> About Me
-          </h2>
-          <RenderResumeAboutYou aboutYou={aboutYou} />
-        </div>
+        <RenderResumeAboutYou aboutYou={aboutYou} icon={<UserRound />} />
+
         <div className="t1-contact">
           <h2>
             <SquareUserRound />
             Contact
           </h2>
-          <span>
-            <Phone size={20} />
-            <RenderResumeNumber number={number} />
-          </span>
-          <span>
-            <MapPin size={20} />
-            <RenderResumeEmail email={email} />
-          </span>
-          <span>
-            <Mail size={20} />
-            <RenderResumeAddress address={address} />
-          </span>
+          <RenderResumeNumber number={number} icon={<Phone size={20} />} />
+          <RenderResumeEmail email={email} icon={<Mail size={20} />} />
+          <RenderResumeAddress address={address} icon={<MapPin size={20} />} />
         </div>
         <div className="t1-skills">
           <h2>
