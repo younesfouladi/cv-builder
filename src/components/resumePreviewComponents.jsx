@@ -1,5 +1,3 @@
-import { useEffect, useState } from "react";
-
 export function RenderResumePicture() {
   return (
     <div className="resume-picture">

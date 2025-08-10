@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Trash2 } from "lucide-react";
 
 export default function SkillsInfo({ skills, setSkill, setAboutYou }) {
   const [currentSkill, setCurrentSkill] = useState("");
@@ -7,6 +8,10 @@ export default function SkillsInfo({ skills, setSkill, setAboutYou }) {
     if (currentSkill.trim() === "") return;
     setSkill((prevSkills) => [...prevSkills, currentSkill]);
     setCurrentSkill("");
+  };
+
+  const handleRemoveSkill = (key) => {
+    setSkill((prevItems) => prevItems.filter((item) => item !== key));
   };
 
   return (
@@ -46,7 +51,16 @@ export default function SkillsInfo({ skills, setSkill, setAboutYou }) {
         </label>
         <ul className="FormSkillList">
           {skills.length > 0 ? (
-            skills.map((skill, index) => <li key={index}>{skill}</li>)
+            skills.map((skill) => (
+              <li key={skill}>
+                {
+                  <button onClick={() => handleRemoveSkill(skill)}>
+                    {<Trash2 size={20} color="#b90000" />}
+                  </button>
+                }{" "}
+                {skill}
+              </li>
+            ))
           ) : (
             <p>Nothing Added...</p>
           )}

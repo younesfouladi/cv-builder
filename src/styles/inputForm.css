@@ -80,3 +80,26 @@
   background-color: var(--primary-color);
   color: var(--container-bg);
 }
+
+.inputform form .input-section .FormSkillList {
+  background-color: var(--gray-light);
+  border: 1px solid var(--input-border);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-radius: 2rem;
+  padding: 1rem 1.5rem;
+  row-gap: 1rem;
+  list-style: none;
+}
+
+.inputform form .input-section .FormSkillList li {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.inputform form .input-section .FormSkillList li button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
