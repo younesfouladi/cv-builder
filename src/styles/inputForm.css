@@ -3,6 +3,7 @@
   border-radius: 2rem;
   border: 1px solid var(--section-border);
   height: fit-content;
+  animation: slide-in 2s 1 alternate;
 }
 
 .inputform form {
@@ -43,18 +44,6 @@
   flex-direction: column;
   row-gap: 1rem;
   animation: slide-in 0.5s 1 alternate;
-}
-
-@keyframes slide-in {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    transform: scale(90%);
-  }
-  100% {
-    opacity: 1;
-  }
 }
 
 .inputform form .input-section input {

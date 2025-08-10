@@ -9,6 +9,7 @@
   border: 1px solid var(--section-border);
   border-radius: 2rem;
   padding: 2rem 1rem;
+  animation: fall-in 1s 1 alternate;
 }
 
 .navbar .site-logo {

@@ -3,6 +3,7 @@
   border: 1px solid var(--primary-hover);
   padding: 1rem;
   border-radius: 2rem;
+  animation: slide-in 1s 1 alternate;
 }
 
 .resumePreview > div {

@@ -98,3 +98,15 @@ input:focus {
   border: none;
   cursor: pointer;
 }
+
+@keyframes slide-in {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    transform: scale(90%);
+  }
+  100% {
+    opacity: 1;
+  }
+}
