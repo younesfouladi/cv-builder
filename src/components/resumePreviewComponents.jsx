@@ -81,3 +81,19 @@ export function RenderResumeLanguage({ language }) {
     </ul>
   );
 }
+
+export function RenderResumeEducaion({ education }) {
+  if (education.length > 0)
+    return (
+      <div className="resume-education">
+        <h2>Education</h2>
+        {education.map((item, index) => (
+          <ul key={index}>
+            <li key={item.title}>{item.title}</li>
+            <li key={item.name}>{item.name}</li>
+            <li key={item.startDate}>{item.startDate}</li>
+          </ul>
+        ))}
+      </div>
+    );
+}

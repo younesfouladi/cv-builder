@@ -11,6 +11,7 @@ import {
   RenderResumeAboutYou,
   RenderResumeSkills,
   RenderResumeLanguage,
+  RenderResumeEducaion,
 } from "../resumePreviewComponents.jsx";
 
 import {
@@ -34,6 +35,7 @@ export default function ResumePreview({
   aboutYou,
   skills,
   language,
+  education,
 }) {
   return (
     <div className="resumePreview">
@@ -47,6 +49,7 @@ export default function ResumePreview({
         aboutYou={aboutYou}
         skills={skills}
         language={language}
+        education={education}
       />
     </div>
   );
@@ -62,6 +65,7 @@ function TemplateOne({
   aboutYou,
   skills,
   language,
+  education,
 }) {
   useEffect(() => {
     const container = document.querySelector(".ResumePreview");
@@ -105,6 +109,7 @@ function TemplateOne({
           <RenderResumeLastName lastName={lastName} />
           <RenderResumeJobTitle jobTitle={jobTitle} />
         </div>
+        <RenderResumeEducaion education={education} />
       </div>
     </div>
   );
