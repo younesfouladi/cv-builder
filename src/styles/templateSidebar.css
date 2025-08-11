@@ -1,0 +1,48 @@
+.template-sidebar {
+  background-color: var(--section-bg);
+  border-radius: 2rem;
+  padding: 2rem;
+  max-width: fit-content;
+  justify-self: end;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: fit-content;
+  row-gap: 2rem;
+  column-gap: 1rem;
+  border: 1px solid var(--section-border);
+}
+
+.template-sidebar > h2 {
+  border-bottom: 1px solid var(--input-border);
+  padding: 1rem 0;
+  grid-column: 1 / -1;
+}
+
+.template-sidebar .template-card {
+  background-color: var(--gray-light);
+  border-radius: 1rem;
+  border: 1px solid var(--section-border);
+  text-align: center;
+  padding-bottom: 1rem;
+  color: var(--gray-color);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.template-sidebar .template-card:hover {
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+  animation: hover-in 1s 1 alternate;
+}
+
+.template-sidebar .template-card.isActive {
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+.template-sidebar .template-card img {
+  max-width: 150px;
+  height: auto;
+  margin-bottom: 1rem;
+  border-radius: 1rem;
+}

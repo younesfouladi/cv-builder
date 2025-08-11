@@ -4,6 +4,9 @@
   padding: 1rem;
   border-radius: 2rem;
   animation: slide-in 1s 1 alternate;
+  justify-self: center;
+  min-width: 700px;
+  max-width: 750px;
 }
 
 @media print {

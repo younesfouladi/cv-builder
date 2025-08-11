@@ -3,6 +3,7 @@ import "./App.css";
 import Navbar from "./components/header/navbar.jsx";
 import InputForm from "./components/main/inputForm.jsx";
 import ResumePreview from "./components/main/resumePreview.jsx";
+import TemplateSidebar from "./components/main/templateSelector.jsx";
 
 function App() {
   const [name, setName] = useState("");
@@ -53,6 +54,7 @@ function App() {
         experiences={experiences}
         contentRef={contentRef}
       />
+      <TemplateSidebar />
     </div>
   );
 }
