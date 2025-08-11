@@ -6,6 +6,7 @@ import ResumePreview from "./components/main/resumePreview.jsx";
 import TemplateSidebar from "./components/main/templateSelector.jsx";
 
 function App() {
+  const [isActive, setIsActive] = useState(0);
   const [name, setName] = useState("");
   const [lastName, setLastName] = useState("");
   const [jobTitle, setJobTitle] = useState("");
@@ -22,7 +23,11 @@ function App() {
 
   return (
     <div className="container">
-      <Navbar contentRef={contentRef} />
+      <Navbar
+        contentRef={contentRef}
+        isActive={isActive}
+        setIsActive={setIsActive}
+      />
       <InputForm
         setName={setName}
         setLastName={setLastName}
@@ -39,6 +44,8 @@ function App() {
         setEducation={setEducation}
         experiences={experiences}
         setExperiences={setExperiences}
+        isActive={isActive}
+        setIsActive={setIsActive}
       />
 
       <ResumePreview

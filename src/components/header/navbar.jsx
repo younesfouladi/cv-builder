@@ -2,12 +2,13 @@ import "../../styles/navbar.css";
 import { Printer } from "lucide-react";
 import "../../styles/resumePreview.css";
 import { useReactToPrint } from "react-to-print";
+import { useState } from "react";
 
-export default function Navbar({ contentRef }) {
+export default function Navbar({ contentRef, isActive, setIsActive }) {
   return (
     <nav className="navbar">
       <Logo />
-      <BreadCrumb />
+      <BreadCrumb isActive={isActive} setIsActive={setIsActive} />
       <PrintButton contentRef={contentRef} />
     </nav>
   );
@@ -22,13 +23,29 @@ function Logo() {
   );
 }
 
-function BreadCrumb() {
+function BreadCrumb({ isActive, setIsActive }) {
+  const breadClass = (numberOfBread) => {
+    if (isActive === numberOfBread) {
+      return `breadcrumb-item isActive`;
+    } else {
+      return `breadcrumb-item`;
+    }
+  };
+
   return (
     <div className="breadcrumb">
-      <a className="breadcrumb-item">Personal information</a>
-      <a className="breadcrumb-item">Skills</a>
-      <a className="breadcrumb-item">Education</a>
-      <a className="breadcrumb-item">Expriences</a>
+      <a className={breadClass(0)} onClick={() => setIsActive(0)}>
+        Personal information
+      </a>
+      <a className={breadClass(1)} onClick={() => setIsActive(1)}>
+        Skills
+      </a>
+      <a className={breadClass(2)} onClick={() => setIsActive(2)}>
+        Education
+      </a>
+      <a className={breadClass(3)} onClick={() => setIsActive(3)}>
+        Expriences
+      </a>
     </div>
   );
 }

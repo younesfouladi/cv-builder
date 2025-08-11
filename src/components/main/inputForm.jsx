@@ -21,9 +21,9 @@ export default function InputForm({
   setEducation,
   experiences,
   setExperiences,
+  isActive,
+  setIsActive,
 }) {
-  const [isActive, setIsActive] = useState(0);
-
   const handleNextClick = () => {
     setIsActive(isActive + 1);
   };
