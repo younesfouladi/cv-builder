@@ -1,5 +1,4 @@
-// import { useState } from "react";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import "./App.css";
 import Navbar from "./components/header/navbar.jsx";
 import InputForm from "./components/main/inputForm.jsx";
@@ -17,10 +16,11 @@ function App() {
   const [language, setLanguage] = useState([]);
   const [education, setEducation] = useState([]);
   const [experiences, setExperiences] = useState([]);
+  const contentRef = useRef(null);
 
   return (
     <div className="container">
-      <Navbar />
+      <Navbar contentRef={contentRef} />
       <InputForm
         setName={setName}
         setLastName={setLastName}
@@ -51,6 +51,7 @@ function App() {
         language={language}
         education={education}
         experiences={experiences}
+        contentRef={contentRef}
       />
     </div>
   );

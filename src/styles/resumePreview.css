@@ -6,6 +6,26 @@
   animation: slide-in 1s 1 alternate;
 }
 
+@media print {
+  @page {
+    margin: 0;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  #resumePreview {
+    background: none;
+    border: none;
+    padding: 0;
+    border-radius: 0;
+    width: 210mm;
+    height: 297mm;
+  }
+}
+
 .resumePreview > div {
   width: 100%;
   height: 100%;
@@ -16,7 +36,7 @@
 .resumePreview .t1 {
   background-color: var(--section-bg);
   display: grid;
-  grid-template-columns: minmax(200px, 250px) 1fr;
+  grid-template-columns: 40% 1fr;
   padding: 0 2rem;
 }
 
@@ -35,7 +55,7 @@
   width: 100%;
   height: 100%;
   background-color: #293039;
-  clip-path: polygon(100% 20%, 100% 100%, 0 100%, 0 20%);
+  clip-path: polygon(100% 200px, 100% 100%, 0 100%, 0 200px);
   z-index: -1;
   left: 0;
 }
@@ -82,7 +102,7 @@
   padding: 0 1rem;
   display: flex;
   flex-direction: column;
-  line-height: 2;
+  line-height: 2.5;
 }
 
 .resumePreview .t1 .t1-left div h2 {
@@ -120,6 +140,7 @@
 .resumePreview .t1 .t1-right .t1-namesection ~ div {
   display: flex;
   flex-direction: column;
+  margin-top: 1.5rem;
 }
 
 .resumePreview .t1 .t1-right .t1-namesection ~ div h2 {
@@ -136,7 +157,7 @@
 .resumePreview .t1 .t1-right .t1-namesection ~ div ul {
   list-style: none;
   padding-left: 1rem;
-  line-height: 1.8;
+  line-height: 2;
   border-left: 1px solid #293039;
   margin: 0 0 1.5rem 0.6rem;
   position: relative;

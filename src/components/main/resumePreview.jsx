@@ -1,5 +1,5 @@
 import "../../styles/resumePreview.css";
-import { useEffect } from "react";
+
 import {
   RenderResumePicture,
   RenderResumeAddress,
@@ -39,9 +39,10 @@ export default function ResumePreview({
   language,
   education,
   experiences,
+  contentRef,
 }) {
   return (
-    <div className="resumePreview">
+    <div className="resumePreview" id="resumePreview" ref={contentRef}>
       <TemplateOne
         name={name}
         lastName={lastName}
@@ -72,10 +73,6 @@ function TemplateOne({
   education,
   experiences,
 }) {
-  useEffect(() => {
-    const container = document.querySelector(".ResumePreview");
-    if (container) container.classList.add("template1");
-  });
   return (
     <div className="t1">
       <div className="t1-left">

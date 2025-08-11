@@ -1,12 +1,14 @@
 import "../../styles/navbar.css";
 import { Printer } from "lucide-react";
+import "../../styles/resumePreview.css";
+import { useReactToPrint } from "react-to-print";
 
-export default function Navbar() {
+export default function Navbar({ contentRef }) {
   return (
     <nav className="navbar">
       <Logo />
       <BreadCrumb />
-      <PrintButton />
+      <PrintButton contentRef={contentRef} />
     </nav>
   );
 }
@@ -31,9 +33,10 @@ function BreadCrumb() {
   );
 }
 
-function PrintButton() {
+function PrintButton({ contentRef }) {
+  const handlePrint = useReactToPrint({ contentRef });
   return (
-    <button className="printerIcon">
+    <button className="printerIcon" onClick={handlePrint}>
       <Printer color="#1476e4" size={28} />
     </button>
   );
