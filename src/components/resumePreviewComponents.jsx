@@ -87,11 +87,11 @@ export function RenderResumeEducaion({ education }) {
     return (
       <div className="resume-education">
         <h2>Education</h2>
-        {education.map((item, index) => (
-          <ul key={index}>
-            <li key={item.title}>{item.title}</li>
-            <li key={item.name}>{item.name}</li>
-            <li key={item.startDate}>
+        {education.map((item) => (
+          <ul key={item.id}>
+            <li>{item.title}</li>
+            <li>{item.name}</li>
+            <li>
               {new Date(item.startDate).getFullYear()}
               {" - "}
               {new Date(item.endDate).getFullYear()}
@@ -107,11 +107,11 @@ export function RenderResumeExperiences({ experiences }) {
     return (
       <div className="resume-education">
         <h2>Experiences</h2>
-        {experiences.map((item, index) => (
-          <ul key={index}>
-            <li key={item.title}>{item.title}</li>
-            <li key={item.name}>{item.name}</li>
-            <li key={item.startDate}>
+        {experiences.map((item) => (
+          <ul key={item.id}>
+            <li>{item.title}</li>
+            <li>{item.name}</li>
+            <li>
               {new Date(item.startDate).getFullYear()}
               {" - "}
               {new Date(item.endDate).getFullYear()}{" "}

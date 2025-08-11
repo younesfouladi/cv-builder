@@ -7,6 +7,7 @@ export default function ExperiencesInfo({ experiences, setExperiences }) {
     title: "",
     startDate: "",
     endDate: "",
+    id: crypto.randomUUID(),
   });
 
   const handleAddExp = () => {
@@ -18,7 +19,13 @@ export default function ExperiencesInfo({ experiences, setExperiences }) {
     )
       return;
     setExperiences((prevExp) => [...prevExp, { ...currentExp }]);
-    setCurrentExp({ name: "", title: "", startDate: "", endDate: "" });
+    setCurrentExp({
+      name: "",
+      title: "",
+      startDate: "",
+      endDate: "",
+      id: crypto.randomUUID(),
+    });
   };
 
   const handleRemoveExp = (key) => {
@@ -105,7 +112,7 @@ export default function ExperiencesInfo({ experiences, setExperiences }) {
         <ul className="addremoveList educationFormList">
           {experiences.length > 0 ? (
             experiences.map((obj) => (
-              <li key={obj.startDate}>
+              <li key={obj.id}>
                 <button onClick={() => handleRemoveExp(obj.startDate)}>
                   {<Trash2 size={20} color="#b90000" />}
                 </button>

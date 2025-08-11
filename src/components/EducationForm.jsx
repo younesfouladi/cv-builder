@@ -7,6 +7,7 @@ export default function EducationInfo({ education, setEducation }) {
     title: "",
     startDate: "",
     endDate: "",
+    id: crypto.randomUUID(),
   });
 
   const handleAddEdu = () => {
@@ -18,7 +19,13 @@ export default function EducationInfo({ education, setEducation }) {
     )
       return;
     setEducation((prevEdu) => [...prevEdu, { ...currentEducation }]);
-    setCurrentEducation({ name: "", title: "", startDate: "", endDate: "" });
+    setCurrentEducation({
+      name: "",
+      title: "",
+      startDate: "",
+      endDate: "",
+      id: crypto.randomUUID(),
+    });
   };
 
   const handleRemoveEdu = (key) => {
@@ -105,7 +112,7 @@ export default function EducationInfo({ education, setEducation }) {
         <ul className="addremoveList educationFormList">
           {education.length > 0 ? (
             education.map((obj) => (
-              <li key={obj.startDate}>
+              <li key={obj.id}>
                 <button onClick={() => handleRemoveEdu(obj.startDate)}>
                   {<Trash2 size={20} color="#b90000" />}
                 </button>
