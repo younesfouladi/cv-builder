@@ -116,3 +116,29 @@ button.AddObjectListBtn {
   margin: 0 auto;
   padding: 0.5rem 2rem;
 }
+
+.animatedComingSoon {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 50%;
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  animation: dance 1.5s infinite alternate;
+}
+
+@keyframes dance {
+  0% {
+    transform: scale(90%);
+  }
+  30% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    scale: 120%;
+  }
+}

@@ -10,6 +10,7 @@
   row-gap: 2rem;
   column-gap: 1rem;
   border: 1px solid var(--section-border);
+  animation: slide-in 1s 1 alternate;
 }
 
 .template-sidebar > h2 {
