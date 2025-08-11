@@ -67,7 +67,7 @@ export default function PersonalInfo({
             type="tel"
             name="number"
             id="number"
-            maxLength={10}
+            maxLength={11}
             onChange={(e) => setNumber(e.target.value)}
           />
         </label>

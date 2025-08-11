@@ -109,9 +109,9 @@ export function RenderResumeExperiences({ experiences, icon }) {
         <h2>{icon} Experiences</h2>
         {experiences.map((item) => (
           <ul key={item.id}>
-            <li>{item.title}</li>
-            <li>{item.name}</li>
-            <li>
+            <li className="job-name">{item.title}</li>
+            <li className="company-name">{item.name}</li>
+            <li className="work-days">
               {new Date(item.startDate).getFullYear()}
               {" - "}
               {new Date(item.endDate).getFullYear()}{" "}

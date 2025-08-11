@@ -55,7 +55,9 @@
 .resumePreview .t1 .t1-right {
   display: flex;
   flex-direction: column;
-  padding: 2rem 1rem 0 1rem;
+  padding: 2rem 2rem 0 2rem;
+  row-gap: 1rem;
+  color: #293039;
 }
 
 .resumePreview .t1 .t1-right .t1-namesection {
@@ -113,4 +115,63 @@
   display: flex;
   align-items: center;
   column-gap: 5px;
+}
+
+.resumePreview .t1 .t1-right .t1-namesection ~ div {
+  display: flex;
+  flex-direction: column;
+}
+
+.resumePreview .t1 .t1-right .t1-namesection ~ div h2 {
+  display: flex;
+  column-gap: 0.5rem;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.resumePreview .t1 .t1-right .t1-namesection ~ div h2 svg {
+  color: inherit;
+}
+
+.resumePreview .t1 .t1-right .t1-namesection ~ div ul {
+  list-style: none;
+  padding-left: 1rem;
+  line-height: 1.8;
+  border-left: 1px solid #293039;
+  margin: 0 0 1.5rem 0.6rem;
+  position: relative;
+}
+
+.resumePreview .t1 .t1-right .t1-namesection ~ div ul:last-child {
+  margin: 0 0 0 0.6rem;
+}
+
+.resumePreview .t1 .t1-right .t1-namesection ~ div ul::before {
+  content: "";
+  position: absolute;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: #293039;
+  top: 0;
+  left: -4px;
+}
+
+.resumePreview .t1 .t1-right .t1-namesection ~ div ul::after {
+  content: "";
+  position: absolute;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: #293039;
+  bottom: 0;
+  left: -4px;
+}
+
+.resumePreview .t1 .t1-right .t1-namesection ~ div ul li:first-child {
+  font-weight: 900;
+}
+
+.resumePreview .t1 .t1-right .t1-namesection ~ div ul li:nth-child(2) {
+  font-weight: 500;
 }
