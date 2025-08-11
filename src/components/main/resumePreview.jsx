@@ -23,6 +23,8 @@ import {
   Mail,
   MapPin,
   Earth,
+  GraduationCap,
+  Briefcase,
 } from "lucide-react";
 
 export default function ResumePreview({
@@ -112,8 +114,11 @@ function TemplateOne({
           <RenderResumeLastName lastName={lastName} />
           <RenderResumeJobTitle jobTitle={jobTitle} />
         </div>
-        <RenderResumeEducaion education={education} />
-        <RenderResumeExperiences experiences={experiences} />
+        <RenderResumeEducaion education={education} icon={<GraduationCap />} />
+        <RenderResumeExperiences
+          experiences={experiences}
+          icon={<Briefcase />}
+        />
       </div>
     </div>
   );

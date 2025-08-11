@@ -82,11 +82,11 @@ export function RenderResumeLanguage({ language }) {
   );
 }
 
-export function RenderResumeEducaion({ education }) {
+export function RenderResumeEducaion({ education, icon }) {
   if (education.length > 0)
     return (
       <div className="resume-education">
-        <h2>Education</h2>
+        <h2>{icon} Education</h2>
         {education.map((item) => (
           <ul key={item.id}>
             <li>{item.title}</li>
@@ -102,11 +102,11 @@ export function RenderResumeEducaion({ education }) {
     );
 }
 
-export function RenderResumeExperiences({ experiences }) {
+export function RenderResumeExperiences({ experiences, icon }) {
   if (experiences.length > 0)
     return (
       <div className="resume-education">
-        <h2>Experiences</h2>
+        <h2>{icon} Experiences</h2>
         {experiences.map((item) => (
           <ul key={item.id}>
             <li>{item.title}</li>
