@@ -17,6 +17,7 @@ function App() {
   const [language, setLanguage] = useState([]);
   const [education, setEducation] = useState([]);
   const [experiences, setExperiences] = useState([]);
+  const [activeTemplate, setActiveTemplate] = useState(0);
   const contentRef = useRef(null);
 
   return (
@@ -53,8 +54,12 @@ function App() {
         education={education}
         experiences={experiences}
         contentRef={contentRef}
+        activeTemplate={activeTemplate}
       />
-      <TemplateSidebar />
+      <TemplateSidebar
+        activeTemplate={activeTemplate}
+        setActiveTemplate={setActiveTemplate}
+      />
     </div>
   );
 }

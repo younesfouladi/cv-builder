@@ -40,22 +40,27 @@ export default function ResumePreview({
   education,
   experiences,
   contentRef,
+  activeTemplate,
 }) {
   return (
     <div className="resumePreview" id="resumePreview" ref={contentRef}>
-      <TemplateOne
-        name={name}
-        lastName={lastName}
-        jobTitle={jobTitle}
-        email={email}
-        number={number}
-        address={address}
-        aboutYou={aboutYou}
-        skills={skills}
-        language={language}
-        education={education}
-        experiences={experiences}
-      />
+      {activeTemplate === 0 ? (
+        <TemplateOne
+          name={name}
+          lastName={lastName}
+          jobTitle={jobTitle}
+          email={email}
+          number={number}
+          address={address}
+          aboutYou={aboutYou}
+          skills={skills}
+          language={language}
+          education={education}
+          experiences={experiences}
+        />
+      ) : (
+        <p className="animatedComingSoon">Coming Soon...</p>
+      )}
     </div>
   );
 }
