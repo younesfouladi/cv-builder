@@ -63,7 +63,7 @@ export default function EducationInfo({ education, setEducation }) {
         </label>
         <div className="twoColumnForm">
           <label htmlFor="startYearEdu">
-            Start Data
+            Start Date
             <input
               type="date"
               name="startYearEdu"
@@ -123,8 +123,4 @@ export default function EducationInfo({ education, setEducation }) {
       </div>
     </>
   );
-}
-
-{
-  /*  */
 }

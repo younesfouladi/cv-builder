@@ -16,6 +16,7 @@ function App() {
   const [aboutYou, setAboutYou] = useState("");
   const [language, setLanguage] = useState([]);
   const [education, setEducation] = useState([]);
+  const [experiences, setExperiences] = useState([]);
 
   return (
     <div className="container">
@@ -34,6 +35,8 @@ function App() {
         setLanguage={setLanguage}
         education={education}
         setEducation={setEducation}
+        experiences={experiences}
+        setExperiences={setExperiences}
       />
 
       <ResumePreview

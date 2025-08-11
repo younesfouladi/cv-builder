@@ -3,6 +3,7 @@ import "../../styles/inputForm.css";
 import PersonalInfo from "../personForm.jsx";
 import SkillsInfo from "../skillsForm.jsx";
 import EducationInfo from "../EducationForm.jsx";
+import ExperiencesInfo from "../expriencesForm.jsx";
 
 export default function InputForm({
   setName,
@@ -18,6 +19,8 @@ export default function InputForm({
   setLanguage,
   education,
   setEducation,
+  experiences,
+  setExperiences,
 }) {
   const [isActive, setIsActive] = useState(0);
 
@@ -60,6 +63,13 @@ export default function InputForm({
                 <EducationInfo
                   education={education}
                   setEducation={setEducation}
+                />
+              );
+            case 3:
+              return (
+                <ExperiencesInfo
+                  experiences={experiences}
+                  setExperiences={setExperiences}
                 />
               );
           }
