@@ -97,3 +97,19 @@ export function RenderResumeEducaion({ education }) {
       </div>
     );
 }
+
+export function RenderResumeExperiences({ experiences }) {
+  if (experiences.length > 0)
+    return (
+      <div className="resume-education">
+        <h2>Education</h2>
+        {experiences.map((item, index) => (
+          <ul key={index}>
+            <li key={item.title}>{item.title}</li>
+            <li key={item.name}>{item.name}</li>
+            <li key={item.startDate}>{item.startDate}</li>
+          </ul>
+        ))}
+      </div>
+    );
+}

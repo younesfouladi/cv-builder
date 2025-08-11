@@ -50,7 +50,7 @@ function App() {
         skills={skills}
         language={language}
         education={education}
-        setEducation={setEducation}
+        experiences={experiences}
       />
     </div>
   );

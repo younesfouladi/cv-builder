@@ -12,6 +12,7 @@ import {
   RenderResumeSkills,
   RenderResumeLanguage,
   RenderResumeEducaion,
+  RenderResumeExperiences,
 } from "../resumePreviewComponents.jsx";
 
 import {
@@ -22,7 +23,6 @@ import {
   Mail,
   MapPin,
   Earth,
-  User,
 } from "lucide-react";
 
 export default function ResumePreview({
@@ -36,6 +36,7 @@ export default function ResumePreview({
   skills,
   language,
   education,
+  experiences,
 }) {
   return (
     <div className="resumePreview">
@@ -50,6 +51,7 @@ export default function ResumePreview({
         skills={skills}
         language={language}
         education={education}
+        experiences={experiences}
       />
     </div>
   );
@@ -66,6 +68,7 @@ function TemplateOne({
   skills,
   language,
   education,
+  experiences,
 }) {
   useEffect(() => {
     const container = document.querySelector(".ResumePreview");
@@ -110,6 +113,7 @@ function TemplateOne({
           <RenderResumeJobTitle jobTitle={jobTitle} />
         </div>
         <RenderResumeEducaion education={education} />
+        <RenderResumeExperiences experiences={experiences} />
       </div>
     </div>
   );
