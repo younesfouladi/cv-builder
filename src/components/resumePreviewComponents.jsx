@@ -91,7 +91,11 @@ export function RenderResumeEducaion({ education }) {
           <ul key={index}>
             <li key={item.title}>{item.title}</li>
             <li key={item.name}>{item.name}</li>
-            <li key={item.startDate}>{item.startDate}</li>
+            <li key={item.startDate}>
+              {new Date(item.startDate).getFullYear()}
+              {" - "}
+              {new Date(item.endDate).getFullYear()}
+            </li>
           </ul>
         ))}
       </div>
@@ -102,14 +106,32 @@ export function RenderResumeExperiences({ experiences }) {
   if (experiences.length > 0)
     return (
       <div className="resume-education">
-        <h2>Education</h2>
+        <h2>Experiences</h2>
         {experiences.map((item, index) => (
           <ul key={index}>
             <li key={item.title}>{item.title}</li>
             <li key={item.name}>{item.name}</li>
-            <li key={item.startDate}>{item.startDate}</li>
+            <li key={item.startDate}>
+              {new Date(item.startDate).getFullYear()}
+              {" - "}
+              {new Date(item.endDate).getFullYear()}{" "}
+              <strong>({convertDay(item.startDate, item.endDate)})</strong>
+            </li>
           </ul>
         ))}
       </div>
     );
+}
+
+function convertDay(start, end) {
+  const days = (new Date(end) - new Date(start)) / (1000 * 60 * 60 * 24);
+  const averageDaysInMonth = 30;
+  const months = Math.floor(days / averageDaysInMonth);
+  const remainingDays = days % averageDaysInMonth;
+
+  if (months === 0) {
+    return `${remainingDays} Days`;
+  } else {
+    return `${months} Months`;
+  }
 }
