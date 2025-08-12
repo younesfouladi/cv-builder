@@ -7,7 +7,7 @@
   justify-self: center;
   min-width: 700px;
   max-width: 750px;
-  height: 900px;
+  /* height: 900px; */
 }
 
 @media print {
@@ -211,16 +211,11 @@
   }
 
   .resumePreview .t1 {
-    grid-template-columns: 1fr;
     padding: 1rem;
   }
 
-  .resumePreview .t1 .t1-left .backdrop {
-    clip-path: polygon(100% 150px, 100% 100%, 0 100%, 0 150px);
-  }
-
   .resumePreview .t1 .t1-right {
-    padding: 1rem 0;
+    /* padding: 1.5rem 0; */
   }
 
   .resumePreview .t1 .t1-right .t1-namesection {
@@ -231,5 +226,38 @@
   .resumePreview .t1 .t1-right .t1-namesection .resume-name,
   .resumePreview .t1 .t1-right .t1-namesection .resume-lastname {
     font-size: 2rem;
+  }
+
+  .resumePreview .t1 .t1-right .t1-namesection .resume-name {
+    font-size: 2rem;
+  }
+
+  .resumePreview .t1 .t1-right .t1-namesection .resume-lastname {
+    font-size: 2.5rem;
+  }
+
+  .resumePreview .t1 .t1-right .t1-namesection .resume-jobtitle {
+    font-size: 1.2rem;
+  }
+
+  .resumePreview .t1 .t1-right .t1-namesection ~ div h2 {
+    font-size: 1.1rem;
+  }
+
+  .resumePreview .t1 .t1-left div h2 {
+    font-size: 1.1rem;
+  }
+
+  .resumePreview .t1 .t1-left .resume-picture ~ div {
+    line-height: 2;
+  }
+
+  .resumePreview .t1 .t1-left .backdrop {
+    width: 100%;
+    height: 100%;
+    background-color: #293039;
+    clip-path: polygon(100% 100px, 100% 100%, 0 100%, 0 100px);
+    z-index: -1;
+    left: 0;
   }
 }

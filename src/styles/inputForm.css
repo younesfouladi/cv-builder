@@ -4,6 +4,7 @@
   border: 1px solid var(--section-border);
   height: fit-content;
   animation: slide-in 1s 1 alternate;
+  overflow: hidden;
 }
 
 .inputform form {

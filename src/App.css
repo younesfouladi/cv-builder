@@ -35,21 +35,58 @@ body {
   .template-sidebar {
     margin-right: auto;
   }
+
+  .resumePreview {
+    grid-column: 2 / 3;
+    grid-row: 2 / -1;
+  }
 }
 
 @media screen and (max-width: 992px) {
   .container {
-    grid-template-columns: minmax(0, 1fr);
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     padding: 1rem;
     gap: 1.5rem;
   }
 
-  .inputform,
   .resumePreview,
-  .template-sidebar,
   .footer,
   .navbar {
     grid-column: 1 / -1;
+  }
+
+  .resumePreview {
+    grid-row: auto;
+  }
+
+  .template-sidebar {
+    grid-column: 2 / -1;
+    grid-row: 2;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .site-logo a {
+    display: none;
+  }
+  .container {
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .resumePreview,
+  .footer,
+  .navbar,
+  .template-sidebar {
+    grid-column: 1 / -1;
+  }
+
+  .template-sidebar {
+    grid-row: auto;
+  }
+  .container {
+    grid-template-columns: minmax(0, 1fr);
   }
 }
