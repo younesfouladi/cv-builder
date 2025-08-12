@@ -1,7 +1,7 @@
-CV Builder
+<p align="center">CV Builder</p>
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/younesfouladi/cv-builder/main/public/images/cvbuilder.png" alt="CV Builder Project Logo" width="150"/>
+<img src="https://github.com/younesfouladi/cv-builder/blob/main/public/images/image.png" alt="CV Builder Project Screenshot" width="800"/>
 </p>
 
 <h3 align="center">
@@ -55,29 +55,14 @@ CV Builder is a web application that helps you easily enter your information thr
 
 This project is built using the following tools and libraries:
 
-Technology
+ | Technology | Description |
+| ---------- | ----------- | 
+| React 19 |  For building a dynamic and component-based user interface. |
+| Vite |    As a build tool for faster development. |
+| Modern CSS |   Using variables, Flexbox, and Grid for responsive design. |
+| Lucide React |   For beautiful and lightweight icons. |
+| React-to-Print |   To implement the print and save-to-PDF functionality. |
 
-Description
-
-React 19
-
-For building a dynamic and component-based user interface.
-
-Vite
-
-As a build tool for faster development.
-
-Modern CSS
-
-Using variables, Flexbox, and Grid for responsive design.
-
-Lucide React
-
-For beautiful and lightweight icons.
-
-React-to-Print
-
-To implement the print and save-to-PDF functionality.
 ⚙️ Getting Started
 
 To run this project locally, follow these steps:
