@@ -80,3 +80,29 @@
   border: none;
   cursor: pointer;
 }
+
+/* Added for mobile responsiveness */
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .navbar .breadcrumb {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+  }
+
+  .navbar .breadcrumb a {
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar .breadcrumb a::before {
+    content: none;
+  }
+}

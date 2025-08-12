@@ -200,3 +200,36 @@
 .resumePreview .t1 .t1-right .t1-namesection ~ div ul li:nth-child(2) {
   font-weight: 500;
 }
+
+/* Added for mobile responsiveness */
+@media screen and (max-width: 768px) {
+  .resumePreview {
+    min-width: 100%;
+    max-width: 100%;
+    height: auto;
+    padding: 0.5rem;
+  }
+
+  .resumePreview .t1 {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+
+  .resumePreview .t1 .t1-left .backdrop {
+    clip-path: polygon(100% 150px, 100% 100%, 0 100%, 0 150px);
+  }
+
+  .resumePreview .t1 .t1-right {
+    padding: 1rem 0;
+  }
+
+  .resumePreview .t1 .t1-right .t1-namesection {
+    padding: 2rem 0;
+    text-align: center;
+  }
+
+  .resumePreview .t1 .t1-right .t1-namesection .resume-name,
+  .resumePreview .t1 .t1-right .t1-namesection .resume-lastname {
+    font-size: 2rem;
+  }
+}

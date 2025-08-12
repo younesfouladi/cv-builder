@@ -87,3 +87,9 @@
 .inputform .input-section .educationFormList {
   grid-template-columns: 1fr;
 }
+
+@media screen and (max-width: 405px) {
+  .inputform form {
+    padding: 2rem 1rem;
+  }
+}
