@@ -1,7 +1,7 @@
-CV Builder
+<p align="center">CV Builder</p>
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/younesfouladi/cv-builder/main/public/images/cvbuilder.png" alt="CV Builder Project Logo" width="150"/>
+<img src="https://github.com/younesfouladi/cv-builder/blob/main/public/images/image.png" alt="CV Builder Project Screenshot" width="800"/>
 </p>
 
 <h3 align="center">
