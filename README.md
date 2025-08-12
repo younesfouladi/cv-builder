@@ -55,29 +55,14 @@ CV Builder is a web application that helps you easily enter your information thr
 
 This project is built using the following tools and libraries:
 
-Technology
+ | Technology | Description |
+| ---------- | ----------- | 
+| React 19 |  For building a dynamic and component-based user interface. |
+| Vite |    As a build tool for faster development. |
+| Modern CSS |   Using variables, Flexbox, and Grid for responsive design. |
+| Lucide React |   For beautiful and lightweight icons. |
+| React-to-Print |   To implement the print and save-to-PDF functionality. |
 
-Description
-
-React 19
-
-For building a dynamic and component-based user interface.
-
-Vite
-
-As a build tool for faster development.
-
-Modern CSS
-
-Using variables, Flexbox, and Grid for responsive design.
-
-Lucide React
-
-For beautiful and lightweight icons.
-
-React-to-Print
-
-To implement the print and save-to-PDF functionality.
 ⚙️ Getting Started
 
 To run this project locally, follow these steps:
