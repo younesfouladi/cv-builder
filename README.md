@@ -31,9 +31,6 @@ A simple and modern tool to create a professional resume in just a few clicks.
 <a href="#-license">License</a>
 </p>
 
-<p align="center">
-<img src="https://raw.githubusercontent.com/younesfouladi/cv-builder/main/public/images/image.png" alt="CV Builder Project Preview">
-</p>
 🚀 Introduction
 
 CV Builder is a web application that helps you easily enter your information through a modern user interface to create a beautiful and professional resume. This project was developed to simplify the resume-building process using modern front-end technologies.
