@@ -2,7 +2,6 @@ import "../../styles/navbar.css";
 import { Printer } from "lucide-react";
 import "../../styles/resumePreview.css";
 import { useReactToPrint } from "react-to-print";
-import { useState } from "react";
 
 export default function Navbar({ contentRef, isActive, setIsActive }) {
   return (

@@ -4,6 +4,7 @@ import Navbar from "./components/header/navbar.jsx";
 import InputForm from "./components/main/inputForm.jsx";
 import ResumePreview from "./components/main/resumePreview.jsx";
 import TemplateSidebar from "./components/main/templateSelector.jsx";
+import Footer from "./components/footer/footer.jsx";
 
 function App() {
   const [isActive, setIsActive] = useState(0);
@@ -67,6 +68,8 @@ function App() {
         activeTemplate={activeTemplate}
         setActiveTemplate={setActiveTemplate}
       />
+
+      <Footer />
     </div>
   );
 }
