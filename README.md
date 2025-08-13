@@ -31,8 +31,8 @@ A simple and modern tool to create a professional resume in just a few clicks.
 <a href="#-license">License</a>
 </p>
 
-<h3>Live Preview</h3>
-<a href="https://cv-builder-chi-one.vercel.app/">on Vercel</a>
+<h3>Live Preview <a href="https://cv-builder-chi-one.vercel.app/">on Vercel</a>
+</h3>
 
 🚀 Introduction
 
