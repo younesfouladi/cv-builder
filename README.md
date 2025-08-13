@@ -31,10 +31,11 @@ A simple and modern tool to create a professional resume in just a few clicks.
 <a href="#-license">License</a>
 </p>
 
+🚀 Introduction
+
 <h3>Live Preview</h3>
 <a href="https://cv-builder-chi-one.vercel.app/"></a>
 
-🚀 Introduction
 CV Builder is a web application that helps you easily enter your information through a modern user interface to create a beautiful and professional resume. This project was developed to simplify the resume-building process using modern front-end technologies.
 ✨ Features
 
